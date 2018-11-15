@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="구구단 파이터란?"
+        android:text="@string/title"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp"
@@ -21,7 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="게임으로 구구단을\n쉽게 익히도록 하는\n게임입니다."
+        android:text="@string/explain"
         android:id="@+id/textView15"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
@@ -33,7 +33,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="만든이\nkickscar@gmail.com"
+        android:text="@string/email"
         android:id="@+id/textView16"
         android:layout_marginTop="32dp"
         android:textAlignment="center"

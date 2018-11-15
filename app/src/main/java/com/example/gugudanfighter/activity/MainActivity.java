@@ -21,5 +21,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity( new Intent( MainActivity.this, GameActivity.class  ) );
             }
         });
+
+        findViewById( R.id.button_help ).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent( MainActivity.this, HelpActivity.class  ) );
+            }
+        });
+
+        findViewById( R.id.button_record ).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity( new Intent( MainActivity.this, RecordActivity.class  ) );
+            }
+        });
     }
 }

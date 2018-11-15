@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="app_name">구구단 파이터</string>
+    <string name="title">구구단 파이터란?</string>
+    <string name="explain">게임으로 구구단을\n쉽게 익히도록 하는\n게임입니다.</string>
+    <string name="email">jeh807@gmail.com</string>
+</resources>
