@@ -54,7 +54,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="다시 게임을 시작하시겠습니까?"
+        android:text="@string/try_again"
         android:id="@+id/textView14"
         android:textColor="#000"
         android:textSize="16sp"
@@ -64,14 +64,16 @@
         android:layout_marginTop="15dp" />
 
     <Button
+        android:id="@+id/buttonResultYes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="예"
-        android:id="@+id/buttonResultYes"
-        android:layout_marginTop="10dp"
         android:layout_below="@+id/textView14"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_toStartOf="@+id/textViewResultQuestionCount"
         android:layout_toLeftOf="@+id/textViewResultQuestionCount"
-        android:layout_toStartOf="@+id/textViewResultQuestionCount" />
+        android:text="예" />
 
     <Button
         android:layout_width="wrap_content"

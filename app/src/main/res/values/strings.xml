@@ -3,4 +3,6 @@
     <string name="title">GuGuDanFighter</string>
     <string name="explain">GuGuDanFighter</string>
     <string name="email">GuGuDanFighter</string>
+
+    <string name="try_again">try again?</string>
 </resources>

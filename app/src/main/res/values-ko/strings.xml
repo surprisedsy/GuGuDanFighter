@@ -4,4 +4,6 @@
     <string name="title">구구단 파이터란?</string>
     <string name="explain">게임으로 구구단을\n쉽게 익히도록 하는\n게임입니다.</string>
     <string name="email">jeh807@gmail.com</string>
+
+    <string name="try_again">다시 게임을 시작하시겠습니까?</string>
 </resources>
