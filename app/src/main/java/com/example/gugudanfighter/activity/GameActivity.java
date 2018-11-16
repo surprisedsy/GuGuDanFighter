@@ -15,7 +15,7 @@ import java.util.TimerTask;
 
 public class GameActivity extends AppCompatActivity {
 
-    private static final int TIME_LIMIT = 10;
+    private static final int TIME_LIMIT = 5;
     private Timer timer = new Timer();
 
     private int correctAnswer; // 정답
@@ -27,6 +27,8 @@ public class GameActivity extends AppCompatActivity {
 
     private TextView rndQuesLeftNum;
     private TextView rndQuesRightNum;
+    int rnd1 = randomize(2, 8);
+    int rnd2 = randomize(1, 9);
 
     private int[] answerBtnIds = {
             R.id.button_0_0, R.id.button_0_1, R.id.button_0_2,
@@ -63,11 +65,14 @@ public class GameActivity extends AppCompatActivity {
         rndQuesLeftNum = findViewById(R.id.textViewLeftOperand);
         rndQuesRightNum = findViewById(R.id.textViewRightOperand);
 
-        rndQuesLeftNum.setText("" + randomize(2, 8));
-        rndQuesRightNum.setText("" + randomize(1, 9));
+        rndQuesLeftNum.setText("" + rnd1);
+        rndQuesRightNum.setText("" + rnd2);
+
     }
 
     private void rndAnswSetting() {
+        int[] data = new int[9];
+        int count = 0;
 
         for (int j = 0; j <= 2; j++) {
             for (int k = 0; k <= 2; k++) {
@@ -76,6 +81,18 @@ public class GameActivity extends AppCompatActivity {
                 Button view = findViewById(resId);
 
                 int x = randomize(2, 8) * randomize(1, 9);
+
+                data[count] = x;
+
+                for(int i = 0; i < count; i++)
+                {
+                    if(x == data[i])
+                    {
+                        k--;
+                        count--;
+                    }
+                }
+                count++;
                 view.setText("" + x);
             }
         }
