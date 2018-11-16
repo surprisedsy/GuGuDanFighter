@@ -73,21 +73,24 @@ public class GameActivity extends AppCompatActivity {
     private void rndAnswSetting() {
         int[] data = new int[9];
         int count = 0;
+        correctAnswer = rnd1 * rnd2;
 
         for (int j = 0; j <= 2; j++) {
             for (int k = 0; k <= 2; k++) {
                 String rndBtns = "button_" + j + "_" + k;
-                int resId = getResources().getIdentifier(rndBtns, "id", this.getPackageName());
-                Button view = findViewById(resId);
+                int resID = getResources().getIdentifier(rndBtns, "id", this.getPackageName());
+                Button view = findViewById(resID);
 
                 int x = randomize(2, 8) * randomize(1, 9);
-
                 data[count] = x;
 
-                for(int i = 0; i < count; i++)
-                {
-                    if(x == data[i])
-                    {
+                if (x == correctAnswer) {
+                    k--;
+                    continue;
+                }
+
+                for (int i = 0; i < count; i++) {
+                    if (x == data[i]) {
                         k--;
                         count--;
                     }
@@ -96,6 +99,8 @@ public class GameActivity extends AppCompatActivity {
                 view.setText("" + x);
             }
         }
+        Button ansView = findViewById(answerBtnIds[randomize(0, 8)]);
+        ansView.setText("" + correctAnswer);
     }
 
     private void updateScore(int getCorrectAnswer, int questionCount) {
@@ -141,3 +146,5 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 }
+
+
